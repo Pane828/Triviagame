@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questions Page</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="assets/javascript/app.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body onload="game()">
+
+<div id="container">
+		<div class="jumbotron">
+				<h1>Random Trivia Game</h1>
+				<h2 id="time">20</h2>
+			<div class="panel panel-default">
+			  <div class="panel-heading">Answer these 10 trivia questions</div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">The First sheep was successfully cloned in 1996, what was the sheeps name?</h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="radio" name="Q1A" id="Q1A1" value="Answer1">
+			    	<label for ="Q1A1">Vogue</label>
+			    <input type="radio" name="Q1A" id="Q1A2" value="Answer2">
+			    	<label for ="Q1A2">Peggy</label>
+			    <input type="radio" name="Q1A" id="Q1A3" value="Answer3">
+			    	<label for ="Q1A3">Dolly</label>
+			  </div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">In what year was the search engine "Google" founded? </h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="radio" name="Q2A" id="Q2A1" value="Answer1">
+			    	<label for ="Q2A1">1995</label>
+			    <input type="radio" name="Q2A" id="Q2A2" value="Answer2">
+			   		<label for ="Q2A2">1999</label>
+			    <input type="radio" name="Q2A" id="Q2A3" value="Answer3">
+			    	<label for ="Q2A3">1996</label>
+			  </div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">What year did the sitcom Friends screen to air?</h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="radio" name="Q3A" id="Q3A1" value="Answer1">
+			    		<label for ="Q3A1">1994</label>
+			    <input type="radio" name="Q3A" id="Q3A2" value="Answer2">
+			    		<label for ="Q3A2">1995</label>
+			    <input type="radio" name="Q3A" id="Q3A3" value="Answer3">
+			    		<label for ="Q3A3">1997</label>
+			  </div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">The biggest television show of the early 90's was?</h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="radio" name="Q4A" id="Q4A1" value="Answer1">
+			    		<label for ="Q4A1">The Simpson's</label>
+			    <input type="radio" name="Q4A" id="Q4A2" value="Answer2">
+			    		<label for ="Q4A2">Baywatch</label>
+			    <input type="radio" name="Q4A" id="Q4A3" value="Answer3">
+			    		<label for ="Q4A3">X-Files</label>
+			  </div>
+			</div>
+		
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">'I did not have sexual relations with that woman', to whom does this statement refer?'</h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="radio" name="Q5A" id="Q5A1" value="Answer1">
+			    		<label for ="Q5A1">Monica Gellar</label>	
+			    <input type="radio" name="Q5A" id="Q5A2" value="Answer2">
+			    		<label for ="Q5A2">Monica Bellussi</label>
+			    <input type="radio" name="Q5A" id="Q5A3" value="Answer3">
+			    		<label for ="Q5A3">Monica Lewinski</label>
+			  </div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Which movie won the 1998 Oscar for Best Original Screenplay?</h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="radio" name="Q6A" id="Q6A1" value="Answer1">
+			    		<label for ="Q6A1">"Good Will Hunting"</label>	
+			    <input type="radio" name="Q6A" id="Q6A2" value="Answer2">
+			    		<label for ="Q6A2">"Titanic"</label>	
+			    <input type="radio" name="Q6A" id="Q6A3" value="Answer3">
+			    		<label for ="Q6A3">"Titanic 2"</label>	
+			  </div>
+			</div>									
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">What was the name of the handheld digital pet which was created in the 90s and started a craze amongst children?</h3>
+			  </div>
+			  <div class="panel-body">
+			    <input type="radio" name="Q7A" id="Q7A1" value="Answer1">
+			    		<label for ="Q7A1">Pokemon</label>
+			    <input type="radio" name="Q7A" id="Q7A2" value="Answer2">
+			    		<label for ="Q7A2">Tamagotchi</label>
+			    <input type="radio" name="Q7A" id="Q7A3" value="Answer3">
+			    		<label for ="Q7A3">"Egg" and "computer"</label>
+			  </div>
+			</div>
+		
+	</div>
+
+	<a class="btn btn-primary btn-lg" id="submission-page" href="index3.html"><button>Submit</button></a>
+</div>
+
+
+</body>
+</html>
