@@ -1,27 +1,40 @@
 var answered = 0;
 var incorrect = 0;
-var unanswered = (answered + incorrect)-7;
-var timer = 50;
-
-sessionStorage.setItem("incorrect", JSON.stringify(incorrect));
-var incorrectStr = sessionStorage.getItem(incorrect);
+var timer = 15;
 var interval;
+var delay;
 
 function game(){
 	interval = setInterval(countdown, 1000);
-	conditions();
 };
 
 function countdown (){
 	timer--;
 	$("#time").html(timer);
 	if (timer === 0) {
+		conditions();
+		store();
+		delay = setTimeout(newPage, 5000);
+	}	
+};
+
+function newPage(){
+	window.location.href = "index3.html";
+}
+
+function store(){
 	sessionStorage.setItem("answered", answered);
+	sessionStorage.setItem("incorrect", incorrect);
+
+};
+
+function display(){
 	var answeredStr = sessionStorage.getItem("answered");
 	var answeredDisplay = JSON.parse(answeredStr);
-    window.location.href = "index3.html";
-    $("#correctCount").html(answeredDisplay);
-	}	
+	$("#correctCount").html(answeredDisplay);
+	var incorrectStr = sessionStorage.getItem("incorrect");
+	var incorrectDisplay = JSON.parse(incorrectStr);
+	$("#incorrectCount").html(incorrectStr);
 };
 
 function conditions(){
@@ -72,7 +85,12 @@ function conditions(){
 		window.location.href = "index3.html";
 	}
 
-$("#incorrectCount").html(incorrectStr);
-$("#unanswered").html(unanswered);
-
 }
+
+function clicked(){
+	conditions();
+	store();
+	display();
+	newPage();
+	console.log(answered);
+};
